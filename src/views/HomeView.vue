@@ -1,5 +1,3 @@
-<script setup>
-</script>
 
 <template>
   <main class="bg-gray-900 text-white scroll-smooth flex flex-col justify-center">
@@ -10,7 +8,7 @@
           <div class="flex flex-row justify-start gap-x-10">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">About</a>
             <a href="#projects" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-00 transition duration-200">Projects</a>
-            <a href="#" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">Contact</a>
+            <a href="#contact" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">Contacts</a>
           </div>
         </div>
         <div class="flex">
@@ -20,7 +18,7 @@
       </div>
     </section>
 
-    <section id="about" class="flex flex-col items-center justify-center gap-y-10 mb-10">
+    <section id="about" class="flex flex-col items-center justify-center gap-y-10 mb-32 ">
       <div class="flex justify-center">
         <h1 class="text-5xl">About <span class="text-purple-400">Me</span></h1>
       </div>
@@ -38,8 +36,38 @@
       </div>
     </section>
     
-    <section id="projects">
+    <section id="projects" class="mb-32">
+      <div class="flex justify-center">
+        <h1 class="text-5xl">Projects</h1>
+      </div>
+    </section>
 
+    <section id="contact" class="mb-32">
+      <div class="text-center">
+        <h1 class="text-5xl">Connect with <span class="text-purple-400">Me</span></h1>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="flex flex-col items-center justify-center mt-10 w-full gap-y-3 mb-10">
+        <p class="text-lg text-justify flex items-center gap-x-2"><span class="text-purple-400"><i class="fas fa-envelope"></i></span> kurt.desmond619@gmail.com</p>
+        <p class="text-lg text-justify flex items-center gap-x-2"><span class="text-purple-400"><i class="fas fa-phone-alt"></i></span> 09682011541 </p>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="flex flex-row justify-center gap-x-5">
+        <a href="https://github.com/kurtthezombie/" target="_blank" class="text-xl hover:text-green-400 transition duration-200"><i class="fab fa-github w-6 h-6 mr-2"></i>Github</a>
+        <a href="https://www.linkedin.com/in/kurt-desmond-cabaluna-0253a8312/" target="_blank" class="text-xl hover:text-sky-400 transition duration-200"><i class="fab fa-linkedin w-6 h-6 mr-2"></i>LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <p class="text-center text-sm text-gray-300">kurtthezombie © {{ currentYear }}</p>
     </section>
   </main>
 </template>
+
+<script setup>
+  import { ref } from 'vue';
+
+  const currentYear = ref(new Date().getFullYear());
+</script>
