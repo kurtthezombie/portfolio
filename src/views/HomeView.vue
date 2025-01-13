@@ -14,7 +14,7 @@
         </div>
         <div class="flex">
           <img src="../assets/kurt.png" alt=""
-            class="w-80 min-[320px]:w-48 rounded-full shadow-xl hover:shadow-2xl hover:shadow-purple-700 shadow-gray-700 transition duration-500 ease-in-out" />
+            class="md:w-80 min-[320px]:w-48 rounded-full shadow-xl hover:shadow-2xl hover:shadow-purple-700 shadow-gray-700 transition duration-500 ease-in-out" />
         </div>
       </div>
     </section>
