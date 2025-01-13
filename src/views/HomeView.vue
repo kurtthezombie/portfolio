@@ -1,30 +1,30 @@
 
 <template>
-  <main class="bg-gray-900 text-white scroll-smooth flex flex-col justify-center">
+  <main class="bg-gray-900 text-white scroll-smooth flex flex-col justify-center min-h-screen">
     <section id="landing">
-      <div class="flex flex-row gap-x-20 justify-center items-center h-screen gap-y-10">
-        <div class="flex flex-col gap-y-3 items-start">
-          <h1 class="text-5xl">Hi, I'm <span class="text-purple-300">Kurt Desmond Cabaluna</span></h1>
-          <h1 class="text-xl">Web Developer</h1>
-          <div class="flex flex-row justify-start gap-x-10">
+      <div class="flex flex-col md:flex-row md:gap-x-20 md:px-20 justify-center items-center h-screen gap-y-10">
+        <div class="flex flex-col gap-y-3 md:items-start sm:items-center">
+          <h1 class="text-3xl md:text-5xl min-[320px]:text-center">Hi, I'm <span class="text-purple-300">Kurt Desmond Cabaluna</span></h1>
+          <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center">Web Developer</h1>
+          <div class="flex flex-row justify-start gap-x-10 min-[320px]:justify-center">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">About</a>
             <a href="#projects" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-00 transition duration-200">Projects</a>
             <a href="#contact" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">Contacts</a>
           </div>
         </div>
         <div class="flex">
-          <img src="../assets/kurt.png" alt="" width="300"
-            class="rounded-full shadow-xl hover:shadow-2xl hover:shadow-purple-700 shadow-gray-700 transition duration-500 ease-in-out" />
+          <img src="../assets/kurt.png" alt=""
+            class="w-80 min-[320px]:w-48 rounded-full shadow-xl hover:shadow-2xl hover:shadow-purple-700 shadow-gray-700 transition duration-500 ease-in-out" />
         </div>
       </div>
     </section>
 
     <section id="about" class="flex flex-col items-center justify-center gap-y-10 mb-32 ">
       <div class="flex justify-center">
-        <h1 class="text-5xl">About <span class="text-purple-400">Me</span></h1>
+        <h1 class="sm:text-5xl min-[320px]:text-3xl">About <span class="text-purple-400">Me</span></h1>
       </div>
       <div class="flex justify-center w-1/2">
-        <p class="text-justify text-2xl font-sans">
+        <p class="text-justify sm:text-2xl min-[320px]:text-lg font-sans">
           I’m an aspiring software developer and a dedicated student with a passion for learning new things. I thrive
           on
           exploring innovative solutions, building meaningful projects, and continuously enhancing my skills to grow
@@ -32,7 +32,7 @@
           the dynamic field of technology.
         </p>
       </div>
-      <div class="flex flex-col items-center gap-y-5 mb-5">
+      <div class="flex flex-col items-center gap-y-5 mb-5 min-[320px]:px-10">
         <div class="">
           <h3 class="text-4xl mb-5">Skills</h3>
         </div>
@@ -62,26 +62,26 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10 w-1/2 mx-auto">
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project1.png" alt="Project 1" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3">Student Task Calendar</h2>
+          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">Student Task Calendar</h2>
           <p class="mb-3">A task calendar to keep track of to-dos and deadlines</p>
           <a href="https://github.com/kurtthezombie/task-calendar" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project2.png" alt="Project 2" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3">WheelsOnDeals</h2>
+          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">WheelsOnDeals</h2>
           <p class="mb-3">A simple car showcasing site using .NET</p>
           <a href="https://github.com/kurtthezombie/wheels-on-deals" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project3.png" alt="Project 3" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3">ForumsUnknown</h2>
+          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">ForumsUnknown</h2>
           <p class="mb-3">A forum site for the creepy and eerie stuff.</p>
           <a href="https://github.com/kurtthezombie/forums-unknown-mvc" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <!-- Add more project cards as needed -->
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project4.png" alt="Project 4" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3">Nothing</h2>
+          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">Nothing</h2>
           <p class="mb-3">A site that tracks how long you have been doing nothing.</p>
           <a href="https://nothing-ktz.vercel.app/" target="_blank" class="hover:text-purple-400"><i class="fas fa-link"></i> Link</a>
         </div>
@@ -90,7 +90,7 @@
 
     <section id="contact" class="mb-32">
       <div class="text-center">
-        <h1 class="text-5xl">Connect with <span class="text-purple-400">Me</span></h1>
+        <h1 class="text-5xl sm:text-3xl min-[320px]:text-2xl">Connect with <span class="text-purple-400">Me</span></h1>
       </div>
       
       <!-- Contact Information -->
