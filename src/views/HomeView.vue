@@ -4,7 +4,7 @@
     <section id="landing">
       <div class="flex flex-col md:flex-row md:gap-x-20 md:px-20 justify-center items-center h-screen gap-y-10">
         <div class="flex flex-col gap-y-3 md:items-start sm:items-center">
-          <h1 class="text-3xl md:text-5xl min-[320px]:text-center">Hi, I'm <span class="text-purple-300">Kurt Desmond Cabaluna</span></h1>
+          <h1 class="text-3xl md:text-5xl md:text-start min-[320px]:text-center">Hi, I'm <span class="text-purple-300">Kurt Desmond Cabaluna</span></h1>
           <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center">Web Developer</h1>
           <div class="flex flex-row justify-start gap-x-10 min-[320px]:justify-center">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-400 hover:text-purple-500 transition duration-200">About</a>
@@ -24,7 +24,7 @@
         <h1 class="sm:text-5xl min-[320px]:text-3xl">About <span class="text-purple-400">Me</span></h1>
       </div>
       <div class="flex justify-center w-1/2">
-        <p class="text-justify sm:text-2xl min-[320px]:text-lg font-sans">
+        <p class="text-justify md:text-2xl sm:text-xl min-[320px]:text-lg font-sans">
           I’m an aspiring software developer and a dedicated student with a passion for learning new things. I thrive
           on
           exploring innovative solutions, building meaningful projects, and continuously enhancing my skills to grow
@@ -62,26 +62,26 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10 w-1/2 mx-auto">
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project1.png" alt="Project 1" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">Student Task Calendar</h2>
+          <h2 class="md:text-2xl mb-3 min-[320px]:text-base sm:text-lg text-purple-200">Student Task Calendar</h2>
           <p class="mb-3">A task calendar to keep track of to-dos and deadlines</p>
           <a href="https://github.com/kurtthezombie/task-calendar" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project2.png" alt="Project 2" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">WheelsOnDeals</h2>
+          <h2 class="md:text-2xl mb-3 min-[320px]:text-base sm:text-lg text-purple-200">WheelsOnDeals</h2>
           <p class="mb-3">A simple car showcasing site using .NET</p>
           <a href="https://github.com/kurtthezombie/wheels-on-deals" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project3.png" alt="Project 3" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">ForumsUnknown</h2>
+          <h2 class="md:text-2xl mb-3 min-[320px]:text-base sm:text-lg text-purple-200">ForumsUnknown</h2>
           <p class="mb-3">A forum site for the creepy and eerie stuff.</p>
           <a href="https://github.com/kurtthezombie/forums-unknown-mvc" target="_blank" class="hover:text-purple-400"><i class="fas fa-code-branch"></i> Repository</a>
         </div>
         <!-- Add more project cards as needed -->
         <div class="project-card p-5 bg-gray-800 rounded-lg shadow-lg hover:shadow-purple-800 hover:scale-105 cursor-pointer transition duration-200">
           <img src="../assets/project4.png" alt="Project 4" class="w-full h-auto rounded-lg mb-4">
-          <h2 class="text-2xl mb-3 min-[320px]:text-base sm:text-lg">Nothing</h2>
+          <h2 class="md:text-2xl mb-3 min-[320px]:text-base sm:text-lg text-purple-200">Nothing</h2>
           <p class="mb-3">A site that tracks how long you have been doing nothing.</p>
           <a href="https://nothing-ktz.vercel.app/" target="_blank" class="hover:text-purple-400"><i class="fas fa-link"></i> Link</a>
         </div>
@@ -90,7 +90,7 @@
 
     <section id="contact" class="mb-32">
       <div class="text-center">
-        <h1 class="text-5xl sm:text-3xl min-[320px]:text-2xl">Connect with <span class="text-purple-400">Me</span></h1>
+        <h1 class="md:text-5xl sm:text-3xl min-[320px]:text-2xl">Connect with <span class="text-purple-400">Me</span></h1>
       </div>
       
       <!-- Contact Information -->
