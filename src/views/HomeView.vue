@@ -1,4 +1,3 @@
-
 <template>
   <main class="bg-gray-200 dark:bg-gray-900 text-white scroll-smooth flex flex-col justify-center min-h-screen" :class="{ 'dark': isDarkMode }">
     <section id="landing">
@@ -32,7 +31,7 @@
       </div>
       <div class="flex justify-center w-1/2">
         <p class="text-justify md:text-2xl sm:text-xl min-[320px]:text-lg font-sans text-gray-800 dark:text-white">
-          I’m an aspiring software developer and a dedicated student with a passion for learning new things. I thrive
+          I'm an aspiring software developer and a dedicated student with a passion for learning new things. I thrive
           on
           exploring innovative solutions, building meaningful projects, and continuously enhancing my skills to grow
           in
@@ -94,24 +93,71 @@
         </div>
       </div>
     </section>
-
+    
+    <section>
+      <!-- Social Links -->
+      <div class="flex flex-row justify-center gap-x-5 my-10">
+        <a href="https://github.com/kurtthezombie/" target="_blank" 
+          class="text-xl hover:text-green-900 dark:hover:text-green-400 transition duration-200 text-black dark:text-white">
+          <i class="fab fa-github w-6 h-6 mr-2"></i>Github
+        </a>
+        <a href="https://www.linkedin.com/in/kurt-desmond-cabaluna-0253a8312/" target="_blank" 
+          class="text-xl hover:text-sky-900 dark:hover:text-sky-400 transition duration-200 text-black dark:text-white">
+          <i class="fab fa-linkedin w-6 h-6 mr-2"></i>LinkedIn
+        </a>
+      </div>
+    </section>
+  
     <section id="contact" class="mb-32">
       <div class="text-center">
         <h1 class="md:text-5xl sm:text-3xl min-[320px]:text-2xl text-black dark:text-white">Connect with <span class="text-purple-800 dark:text-purple-400">Me</span></h1>
       </div>
       
-      <!-- Contact Information -->
-      <div class="flex flex-col items-center justify-center mt-10 w-full gap-y-3 mb-10">
-        <p class="text-lg text-justify flex items-center gap-x-2 text-black dark:text-white"><span class="text-purple-800 dark:text-purple-400"><i class="fas fa-envelope"></i></span> kurt.desmond619@gmail.com</p>
-        <p class="text-lg text-justify flex items-center gap-x-2 text-black dark:text-white"><span class="text-purple-800 dark:text-purple-400"><i class="fas fa-phone-alt"></i></span> 09682011541 </p>
-      </div>
-      
-      <!-- Social Links -->
-      <div class="flex flex-row justify-center gap-x-5">
-        <a href="https://github.com/kurtthezombie/" target="_blank" 
-        class="text-xl hover:text-green-900 dark:hover:text-green-400 transition duration-200 text-black dark:text-white"><i class="fab fa-github w-6 h-6 mr-2"></i>Github</a>
-        <a href="https://www.linkedin.com/in/kurt-desmond-cabaluna-0253a8312/" target="_blank" 
-        class="text-xl hover:text-sky-900 dark:hover:text-sky-400 transition duration-200 text-black dark:text-white"><i class="fab fa-linkedin w-6 h-6 mr-2"></i>LinkedIn</a>
+      <!-- Contact Form -->
+      <div class="flex justify-center mt-10">
+        <form @submit.prevent="handleSubmit" class="w-full max-w-lg p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              v-model="formData.name"
+              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              required
+            >
+          </div>
+          
+          <div class="mb-4">
+            <label for="subject" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Subject</label>
+            <input 
+              type="text" 
+              id="subject" 
+              v-model="formData.subject"
+              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              required
+            >
+          </div>
+          
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message</label>
+            <textarea 
+              id="message" 
+              v-model="formData.message"
+              rows="4"
+              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              required
+            ></textarea>
+          </div>
+          
+          <div class="flex justify-center">
+            <button 
+              type="submit"
+              class="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -122,10 +168,32 @@
 </template>
 
 <script setup>
-  import { onMounted, ref } from 'vue';
+  import { sendEmail } from '@/services/email.service';
+import { onMounted, ref } from 'vue';
 
   const currentYear = ref(new Date().getFullYear());
   const isDarkMode = ref(true);
+  const formData = ref({
+    name: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = async () => {
+    try {
+      console.log('Form submitted:', formData.value);
+      await sendEmail(formData.value);
+      
+      // Reset form
+      formData.value = {
+        name: '',
+        subject: '',
+        message: ''
+      };
+    } catch (error) {
+      console.error('Email send failed', error);
+    }
+  };
 
   const toggleTheme = () => {
     isDarkMode.value = !isDarkMode.value;
