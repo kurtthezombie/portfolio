@@ -188,7 +188,7 @@ import { onMounted, ref } from 'vue';
     if (!lastSent) return true;
 
     const now = new Date();
-    const lastDate = newDate(parseInt(lastSent, 10));
+    const lastDate = new Date(parseInt(lastSent, 10));
 
     return now.toDateString() !== lastDate.toDateString();
   }
@@ -204,7 +204,7 @@ import { onMounted, ref } from 'vue';
       console.log('Form submitted:', formData.value);
       
       await sendEmail(formData.value);
-      
+      localStorage.setItem("lastEmailSent", Date.now());
       formData.value = {
         name: '',
         subject: '',
