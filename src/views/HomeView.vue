@@ -171,6 +171,7 @@
 
 <script setup>
   import { sendEmail } from '@/services/email.service';
+import toast from '@/utils/toast';
 import { onMounted, ref } from 'vue';
 
   const currentYear = ref(new Date().getFullYear());
@@ -182,20 +183,37 @@ import { onMounted, ref } from 'vue';
   });
   const isLoading = ref(false);
 
+  const canSend = () => {
+    const lastSent = localStorage.getItem("lastEmailSent");
+    if (!lastSent) return true;
+
+    const now = new Date();
+    const lastDate = newDate(parseInt(lastSent, 10));
+
+    return now.toDateString() !== lastDate.toDateString();
+  }
+
   const handleSubmit = async () => {
+    if(!canSend()) {
+      toast.error('You can only send one message per day.');
+      return;
+    }
+
     isLoading.value = true;
     try {
       console.log('Form submitted:', formData.value);
+      
       await sendEmail(formData.value);
       
-      // Reset form
       formData.value = {
         name: '',
         subject: '',
         message: ''
       };
+      toast.success('Email successfully sent.');
     } catch (error) {
       console.error('Email send failed', error);
+      toast.error('Something went wrong. Try again later.');
     } finally {
       isLoading.value = false;
     }
