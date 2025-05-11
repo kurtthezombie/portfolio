@@ -152,9 +152,11 @@
           <div class="flex justify-center">
             <button 
               type="submit"
-              class="bg-purple-800 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300"
+              :disabled="isLoading"
+              class="btn bg-purple-800 hover:bg-purple-600 focus:outline-none focus:shadow-outline transition duration-300"
             >
-              Send Message
+              <span v-if="isLoading" class="loading loading-spinner"></span> <!-- Show spinner when loading -->
+              <span v-else>Send Message</span> <!-- Show text when not loading -->
             </button>
           </div>
         </form>
@@ -178,8 +180,10 @@ import { onMounted, ref } from 'vue';
     subject: '',
     message: ''
   });
+  const isLoading = ref(false);
 
   const handleSubmit = async () => {
+    isLoading.value = true;
     try {
       console.log('Form submitted:', formData.value);
       await sendEmail(formData.value);
@@ -192,6 +196,8 @@ import { onMounted, ref } from 'vue';
       };
     } catch (error) {
       console.error('Email send failed', error);
+    } finally {
+      isLoading.value = false;
     }
   };
 
@@ -205,5 +211,4 @@ import { onMounted, ref } from 'vue';
       document.documentElement.classList.add("dark");
     }
   })
-
 </script>
