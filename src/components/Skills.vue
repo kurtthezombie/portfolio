@@ -33,9 +33,5 @@
                               C#</a>
                   </div>
             </div>
-            <div class="mt-5">
-                  <a class="rounded-lg bg-purple-800 hover:bg-purple-600 p-3 px-3 transition duration-500 ease-in-out"
-                        href="/Resume.pdf" target="_blank">View Resume</a>
-            </div>
       </div>
 </template>
