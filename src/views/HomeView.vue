@@ -11,7 +11,7 @@
       <div class="flex flex-col md:flex-row md:gap-x-20 md:px-20 justify-center items-center h-screen gap-y-10">
         <div class="flex flex-col gap-y-3 md:items-start sm:items-center">
           <h1 class="text-3xl md:text-5xl md:text-start min-[320px]:text-center text-gray-900 dark:text-white">Hi, I'm <span class="text-violet-900 dark:text-purple-300">Kurt Desmond Cabaluna</span></h1>
-          <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center text-gray-700 dark:text-white">Web Developer</h1>
+          <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center text-gray-700 dark:text-white">Software Engineer</h1>
           <div class="flex flex-row justify-start gap-x-10 min-[320px]:justify-center">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">About</a>
             <a href="#projects" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Projects</a>
