@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-gray-200 dark:bg-gray-900 text-white scroll-smooth flex flex-col justify-center min-h-screen" :class="{ 'dark': isDarkMode }">
+  <main class="bg-gray-200 dark:bg-gray-900 text-white scroll-smooth flex flex-col min-h-screen" :class="{ 'dark': isDarkMode }">
     <section id="landing">
       <div class="flex justify-end pt-5 pr-5">
         <button class="bg-gray-900 dark:bg-white dark:text-black rounded-full p-2 px-5 transition duration-200 shadow-lg" :class="isDarkMode ? 'hover:shadow-purple-300' : 'shadow-md hover:shadow-violet-950'" @click="toggleTheme">
@@ -14,7 +14,7 @@
           <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center text-gray-700 dark:text-white">Software Engineer</h1>
           <div class="flex flex-row justify-start gap-x-10 min-[320px]:justify-center">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">About</a>
-            <a href="#projects" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Projects</a>
+            <a href="#experience" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Experience</a>
             <a href="#contact" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Contacts</a>
           </div>
         </div>
@@ -27,7 +27,7 @@
     
     <AboutMe />
     <Skills />
-    <MyProjects />
+    <Timeline />
     <SocialLinks />
 
     <section id="contact" class="mb-32">
@@ -92,10 +92,11 @@
 </template>
 
 <script setup>
-  import AboutMe from '@/components/AboutMe.vue';
+import AboutMe from '@/components/AboutMe.vue';
 import MyProjects from '@/components/MyProjects.vue';
 import Skills from '@/components/Skills.vue';
 import SocialLinks from '@/components/SocialLinks.vue';
+import Timeline from '@/components/Timeline.vue';
 import { sendEmail } from '@/services/email.service';
 import toast from '@/utils/toast';
 import { onMounted, ref } from 'vue';

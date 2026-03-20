@@ -9,4 +9,5 @@ export const Skills = [
     { link: 'https://learn.microsoft.com/en-us/dotnet/csharp/', name: 'C#'},
     { link: 'https://react.dev/', name: 'React'},
     { link: 'https://nextjs.org/', name: 'Next.js'},
+    { link: 'https://www.gnu.org/software/bash/', name: 'Bash'},
 ]
