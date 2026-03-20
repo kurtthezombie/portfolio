@@ -3,7 +3,7 @@ import experiences from '@/constants/experiences'
 </script>
 
 <template>
-  <section id="timeline" class="max-w-4xl mx-auto py-16 px-6">
+  <section id="experience" class="max-w-4xl mx-auto py-16 px-6">
     <h1 class="text-center text-4xl mb-10 text-black dark:text-white">
       Experience
     </h1>

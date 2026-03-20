@@ -14,7 +14,7 @@
           <h1 class="text-xl sm:text-center md:text-center min-[320px]:text-center text-gray-700 dark:text-white">Software Engineer</h1>
           <div class="flex flex-row justify-start gap-x-10 min-[320px]:justify-center">
             <a href="#about" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">About</a>
-            <a href="#Timeline" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Projects</a>
+            <a href="#experience" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Experience</a>
             <a href="#contact" class="pb-2 border-b-2 border-transparent hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-500 hover:text-purple-800 text-gray-700 dark:text-white transition duration-200">Contacts</a>
           </div>
         </div>
