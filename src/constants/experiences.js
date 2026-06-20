@@ -5,6 +5,27 @@ const experiences = [
     period: '2025 - Present',
     projects: [
       {
+        name: 'Client Website Implementation Projetcs',
+        details: [
+          'Built production client pages from wireframes',
+          'Used HTML, CSS, JavaScript, and CMS-based tools',
+          'Customized responsive layouts and theme-based sections',
+          'Resolved deployment/API issues affecting site updates',
+          'Managed Git workflows with branches, rebases, conflicts, and PRs',
+        ],
+      },
+      {
+        name: 'Internal C#/.NET and Full Stack Training projects',
+        details: [
+          'Implemented an Invoice Create module in ASP.NET Core MVC',
+          'Used Razor Views, ViewModels, Dapper, Npgsql, and PostgreSQL',
+          'Applied service-layer validation and create-flow business rules',
+          'Standardized frontend data loading with a shared reusable pattern',
+          'Established backend formatting and analyzer configuration',
+          'Added validation for deployment security headers',
+        ],
+      },
+      {
         name: 'Company Website (IT Consulting / Software Dev)',
         details: [
           'Migrated data from legacy WordPress system to Laravel using Bash scripts',
