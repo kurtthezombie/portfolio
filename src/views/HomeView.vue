@@ -36,37 +36,37 @@
       </div>
       
       <!-- Contact Form -->
-      <div class="flex justify-center mt-10">
-        <form @submit.prevent="handleSubmit" class="w-full max-w-lg p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+      <div class="flex justify-center mt-10 px-4">
+        <form @submit.prevent="handleSubmit" class="w-full max-w-lg p-6 bg-white text-gray-900 dark:bg-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg shadow-xl shadow-gray-400/40 dark:shadow-black/30">
           <div class="mb-4">
-            <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
+            <label for="name" class="block text-gray-800 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
             <input 
               type="text" 
               id="name" 
               v-model="formData.name"
-              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              class="w-full px-3 py-2 bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-white border border-gray-400 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-700 dark:focus:border-purple-400"
               required
             >
           </div>
           
           <div class="mb-4">
-            <label for="subject" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Subject</label>
+            <label for="subject" class="block text-gray-800 dark:text-gray-300 text-sm font-bold mb-2">Subject</label>
             <input 
               type="text" 
               id="subject" 
               v-model="formData.subject"
-              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              class="w-full px-3 py-2 bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-white border border-gray-400 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-700 dark:focus:border-purple-400"
               required
             >
           </div>
           
           <div class="mb-6">
-            <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message</label>
+            <label for="message" class="block text-gray-800 dark:text-gray-300 text-sm font-bold mb-2">Message</label>
             <textarea 
               id="message" 
               v-model="formData.message"
               rows="4"
-              class="w-full px-3 py-2 text-gray-700 dark:text-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-purple-500"
+              class="w-full px-3 py-2 bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-white border border-gray-400 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-700 dark:focus:border-purple-400"
               required
             ></textarea>
           </div>
@@ -75,7 +75,7 @@
             <button 
               type="submit"
               :disabled="isLoading"
-              class="btn bg-purple-800 hover:bg-purple-600 focus:outline-none focus:shadow-outline transition duration-300"
+              class="btn bg-purple-800 hover:bg-purple-600 text-white border-purple-900 hover:border-purple-700 focus:outline-none focus:shadow-outline transition duration-300"
             >
               <span v-if="isLoading" class="loading loading-spinner"></span> <!-- Show spinner when loading -->
               <span v-else>Send Message</span> <!-- Show text when not loading -->
