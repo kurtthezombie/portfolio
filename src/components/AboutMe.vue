@@ -1,19 +1,21 @@
 <template>
-      <section id="about" class="flex flex-col items-center justify-center gap-y-10 mb-16">
-      <div class="flex justify-center">
-        <h1 class="sm:text-5xl min-[320px]:text-3xl text-gray-800 dark:text-white">About <span class="text-purple-800 dark:text-purple-400">Me</span></h1>
-      </div>
-      <div class="flex justify-center w-1/2">
-        <p class="text-justify md:text-2xl sm:text-xl min-[320px]:text-lg font-sans text-gray-800 dark:text-white">
-          I'm a software engineer with a passion for learning new things. I thrive
-          on
-          exploring innovative solutions, building meaningful projects, and continuously enhancing my skills to grow
-          in
-          the dynamic field of technology.
+  <section class="content-section" id="about">
+    <div class="page-wrap">
+      <div class="section-heading"><h2>About</h2></div>
+      <div class="about-layout">
+        <p>
+          I like turning ideas into working software. What starts as a simple 
+          thought can become an interface, a workflow, or a tool that solves a real problem.
         </p>
+        <div class="tech-list">
+          <div class="tech-row"><span>C# / .NET</span><span>backend systems</span></div>
+          <div class="tech-row"><span>Laravel / PHP</span><span>web applications</span></div>
+          <div class="tech-row"><span>React / TypeScript / Vue</span><span>frontend</span></div>
+          <div class="tech-row"><span>PostgreSQL / MySQL</span><span>relational data</span></div>
+          <div class="tech-row"><span>REST APIs / JSON-RPC</span><span>integrations</span></div>
+          <div class="tech-row"><span>Docker / GitHub Actions / Git</span><span>delivery and workflow</span></div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
-
-<script setup>
-</script>

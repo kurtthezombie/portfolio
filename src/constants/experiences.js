@@ -2,7 +2,7 @@ const experiences = [
   {
     position: 'Software Engineer',
     company: 'Sprobe',
-    period: '2025 - Present',
+    period: '2025 to present',
     projects: [
       {
         name: 'Client Website Implementation Projetcs',
