@@ -470,6 +470,55 @@ h1 {
   font-size: 13px;
 }
 
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tech-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tech-link:hover,
+.tech-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tech-link.csharp:hover,
+.tech-link.csharp:focus-visible,
+.tech-link.dotnet:hover,
+.tech-link.dotnet:focus-visible {
+  color: #a78bfa;
+}
+
+.tech-link.laravel:hover,
+.tech-link.laravel:focus-visible { color: #ff2d20; }
+.tech-link.php:hover,
+.tech-link.php:focus-visible { color: #aeb7e8; }
+.tech-link.react:hover,
+.tech-link.react:focus-visible { color: #61dafb; }
+.tech-link.typescript:hover,
+.tech-link.typescript:focus-visible { color: #3178c6; }
+.tech-link.vue:hover,
+.tech-link.vue:focus-visible { color: #42b883; }
+.tech-link.postgresql:hover,
+.tech-link.postgresql:focus-visible { color: #5b8fca; }
+.tech-link.mysql:hover,
+.tech-link.mysql:focus-visible { color: #2496ed; }
+.tech-link.rest:hover,
+.tech-link.rest:focus-visible { color: #83d0f2; }
+.tech-link.jsonrpc:hover,
+.tech-link.jsonrpc:focus-visible { color: #5b9bd5; }
+.tech-link.docker:hover,
+.tech-link.docker:focus-visible { color: #2496ed; }
+.tech-link.actions:hover,
+.tech-link.actions:focus-visible { color: #2088ff; }
+.tech-link.git:hover,
+.tech-link.git:focus-visible { color: #f05032; }
+
 .tech-row span:last-child {
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
